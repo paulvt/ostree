@@ -18,7 +18,8 @@
 [Unit]
 Description=OSTree Remount OS/ bind mounts
 DefaultDependencies=no
-ConditionKernelCommandLine=ostree
+ConditionKernelCommandLine=|ostree
+ConditionKernelCommandLine=|ostree.bootcsum
 OnFailure=emergency.service
 Conflicts=umount.target
 After=-.mount
